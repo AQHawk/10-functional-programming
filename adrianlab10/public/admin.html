@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
-    <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
+    <script id="admin-template" type="text/x-handlebars-template"></script>
+    <!-- Done: Setup a template for each row of the Author Stats section of this page: -->
+    <li><h2>Author: {{author}}</h2></li>
+    <li><h2>Words Written: {{wordCount}}</h2></li>
 
   </head>
   <body>
@@ -49,9 +52,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
-    <!-- Done?: Due to changes in article.js and articleView.js to attach their interior objects to a global 'app' object, we need to make changes to the contents of the following <script> tag: -->
+    <!-- Done: Due to changes in article.js and articleView.js to attach their interior objects to a global 'app' object, we need to make changes to the contents of the following <script> tag: -->
     <script>
-      // Done?: After we fetch and load all the articles, what view function do we want to run next?
+      // Done: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
       app.Article.fetchAll(app.articleView.initAdminPage);
     </script>
